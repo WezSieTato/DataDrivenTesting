@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  linters:
+    name: Run linters
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v1
+      - name: Cache Mint packages
+        id: mint-cache
+        uses: actions/cache@v3
+        with:
+          path: /Users/runner/.mint
+          key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
+          restore-keys: ${{ runner.os }}-mint-
+      - run: brew install mint
+      - run: mint bootstrap
+      - run: mint run swiftformat --lint .
