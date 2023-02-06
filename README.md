@@ -53,7 +53,27 @@ Which will result in Report Navigator like this:
 
 ![Report Navigator with custom activity name](images/report_navigator_custom.png)
 
+If you need add any attachments to your test case, you can use `XCTActivity` parameter in closure:
 
+```swift
+    private struct CEO: Encodable {
+        let firstName: String
+        let lastName: String
+    }
+
+    func testUsingActivity() {
+        dataTests([
+            TestData(CEO(firstName: "Steve", lastName: "Jobs")),
+            TestData(CEO(firstName: "Tim", lastName: "Cook")),
+        ]) { testData, activity in
+            let json = try! JSONEncoder().encode(testData.data)
+
+            let attachment = XCTAttachment(data: json)
+            attachment.lifetime = .keepAlways
+            activity.add(attachment)
+        }
+    }
+```
 ## Requirements
 
 * Swift 5.0+

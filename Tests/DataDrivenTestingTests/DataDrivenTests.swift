@@ -25,4 +25,22 @@ final class DataDrivenTests: XCTestCase {
             XCTAssertEqual(result, testData.data.1, file: testData.file, line: testData.line)
         }
     }
+
+    private struct CEO: Encodable {
+        let firstName: String
+        let lastName: String
+    }
+
+    func testUsingActivity() {
+        dataTests([
+            TestData(CEO(firstName: "Steve", lastName: "Jobs")),
+            TestData(CEO(firstName: "Tim", lastName: "Cook")),
+        ]) { testData, activity in
+            let json = try! JSONEncoder().encode(testData.data)
+
+            let attachment = XCTAttachment(data: json)
+            attachment.lifetime = .keepAlways
+            activity.add(attachment)
+        }
+    }
 }
