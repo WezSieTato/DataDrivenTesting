@@ -3,8 +3,8 @@ import Foundation
 public struct TestData<DataType> {
     public let data: DataType
     public let name: String?
-    public var file: StaticString
-    public var line: UInt
+    public let file: StaticString
+    public let line: UInt
 
     public init(
         _ data: DataType,
