@@ -76,7 +76,7 @@ If you need add any attachments to your test case, you can use `XCTActivity` par
 ```
 ## Requirements
 
-* Swift 5.0+
+* Swift 5.4+
 * Xcode 9.0+
 
 ## Installation
