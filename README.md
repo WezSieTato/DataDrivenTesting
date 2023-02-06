@@ -98,7 +98,7 @@ If you want to use DataDrivenTesting in any other project that uses [SwiftPM](ht
 dependencies: [
   .package(
     url: "https://github.com/WezSieTato/DataDrivenTesting",
-    from: "1.10.0"
+    from: "1.0.0"
   ),
 ]
 ```
