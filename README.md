@@ -2,6 +2,11 @@
 
 A Swift package that provides data-driven testing functionality for your project.
 
+[![](https://img.shields.io/endpoint?url=https://swiftpackageindex.com/api/packages/WezSieTato/DataDrivenTesting/badge?type=swift-versions)](https://swiftpackageindex.com/WezSieTato/DataDrivenTesting)
+[![](https://img.shields.io/endpoint?url=https://swiftpackageindex.com/api/packages/WezSieTato/DataDrivenTesting/badge?type=platforms)](https://swiftpackageindex.com/WezSieTato/DataDrivenTesting)
+[![Tests](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/tests.yml/badge.svg)](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/tests.yml)
+[![Lint](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/lint.yml/badge.svg)](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/lint.yml)
+
 ## Usage
 
 To run a test with data-driven testing, you just need to run `dataTests` method on your test case:
