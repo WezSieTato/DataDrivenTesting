@@ -6,6 +6,8 @@ A Swift package that provides data-driven testing functionality for your project
 [![](https://img.shields.io/endpoint?url=https://swiftpackageindex.com/api/packages/WezSieTato/DataDrivenTesting/badge?type=platforms)](https://swiftpackageindex.com/WezSieTato/DataDrivenTesting)
 [![Tests](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/tests.yml/badge.svg)](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/tests.yml)
 [![Lint](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/lint.yml/badge.svg)](https://github.com/WezSieTato/DataDrivenTesting/actions/workflows/lint.yml)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DataDrivenTesting.svg)](https://img.shields.io/cocoapods/v/DataDrivenTesting.svg)
+
 
 ## Usage
 
@@ -121,6 +123,14 @@ targets: [
     ]
   )
 ]
+```
+
+### CocoaPods
+
+If you want to use DataDrivenTesting in any other project that uses [CocoaPods](https://cocoapods.org/), add the package as a dependency in `Podfile`:
+
+```ruby
+pod 'DataDrivenTesting', '~> 1.0'
 ```
 
 ## License
