@@ -16,7 +16,7 @@ jobs:
           - "14.0"    # Swift 5.7
 
     name: macOS 12 (Xcode ${{ matrix.xcode }})
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v3
       - name: Select Xcode ${{ matrix.xcode }}
